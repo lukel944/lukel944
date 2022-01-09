@@ -1,0 +1,48 @@
+f = open("randomnumbers.txt", "w")
+linia = f.read().split(',')
+
+
+  
+linia = list(map(int, linia))
+
+
+indexOfEx = []
+tablica = []
+
+print(linia)  
+
+for i in range(len(linia)):
+   
+    
+    if i not in indexOfEx:
+    
+        for t in range(len(linia)):
+            
+    
+            if i not in indexOfEx: 
+                
+                if t not in indexOfEx:
+                    
+                    if linia[i]+linia[t]==12:
+                        
+                       
+                        tablica.append([linia[i],linia[t]])
+                        indexOfEx.append(i)
+                        indexOfEx.append(t)
+                        
+                        break
+                   
+            
+      
+           
+  
+print(tablica)
+
+tablica = map(str, tablica)
+
+
+f.write(tablica)
+
+
+              
+
